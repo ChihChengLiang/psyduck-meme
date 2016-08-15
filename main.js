@@ -1,10 +1,11 @@
 window.onload = function() {
   var canvas = document.getElementById('main-canvas');
   var captions_textarea = document.getElementById('captions');
+  var btnDownload = document.getElementById('btnDownload');
   var font_size = 15;
   
   var ctx = canvas.getContext('2d');
-  ctx.font = font_size + "px Open Sans";
+  ctx.font = font_size + "px Verdana, Geneva, sans-serif";
   ctx.fillStyle = "#285F36";
   ctx.strokeStyle = "#617A66";
 
@@ -47,4 +48,8 @@ window.onload = function() {
 
   img.addEventListener("load", render, false);
   captions_textarea.addEventListener("keyup", render, false);
+  btnDownload.addEventListener("click", function(){
+    var a_tag = this;
+    downloadCanvas(a_tag, "psyduck_meme.png");
+  });
 }
