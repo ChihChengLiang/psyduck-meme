@@ -49,6 +49,8 @@ window.onload = function() {
   img.addEventListener("load", render, false);
   captions_textarea.addEventListener("keyup", render, false);
   btnDownload.addEventListener("click", function(){
+    ga('send', 'event', 'download', 'text', captions_textarea.value);
+
     var a_tag = this;
     downloadCanvas(a_tag, "psyduck_meme.png");
   });
