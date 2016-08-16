@@ -11,6 +11,7 @@ window.onload = function() {
 
   var img = new Image();
   img.src = "//i.imgur.com/gJ4VgdT.jpg";
+  img.crossOrigin = "Anonymous";
 
   var drawImg = function() {
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
