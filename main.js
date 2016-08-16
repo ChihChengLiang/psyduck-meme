@@ -10,7 +10,7 @@ window.onload = function() {
   ctx.strokeStyle = "#617A66";
 
   var img = new Image();
-  img.src = "/psyduck.jpg";
+  img.src = "//i.imgur.com/gJ4VgdT.jpg";
 
   var drawImg = function() {
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
